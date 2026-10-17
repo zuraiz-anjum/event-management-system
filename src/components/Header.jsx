@@ -1,16 +1,28 @@
 import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { logout, selectUser } from '../features/auth/authSlice.js'
+import { showToast } from '../features/toast/toastSlice.js'
 
 const links = [
   { to: '/events', label: 'Events' },
   { to: '/upcoming', label: 'Upcoming' },
   { to: '/categories', label: 'Categories' },
-  { to: '/my-events', label: 'My Events' },
 ]
 
 export default function Header() {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const user = useSelector(selectUser)
   const [open, setOpen] = useState(false)
   const close = () => setOpen(false)
+
+  const handleLogout = () => {
+    dispatch(logout())
+    dispatch(showToast('You have been logged out.', 'info'))
+    close()
+    navigate('/')
+  }
 
   return (
     <header className="header">
@@ -33,9 +45,26 @@ export default function Header() {
               {link.label}
             </NavLink>
           ))}
-          <NavLink to="/login" onClick={close}>
-            Log in
+          <NavLink to="/my-events" onClick={close}>
+            My Events
           </NavLink>
+          {user ? (
+            <>
+              <span className="nav-user">{user.name}</span>
+              <button type="button" className="nav-button" onClick={handleLogout}>
+                Log out
+              </button>
+            </>
+          ) : (
+            <>
+              <NavLink to="/login" onClick={close}>
+                Log in
+              </NavLink>
+              <NavLink to="/register" onClick={close}>
+                Sign up
+              </NavLink>
+            </>
+          )}
         </nav>
       </div>
     </header>
