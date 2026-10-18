@@ -8,6 +8,7 @@ import './styles/base.css'
 import './styles/layout.css'
 import './styles/forms.css'
 import './styles/events.css'
+import './styles/registrations.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

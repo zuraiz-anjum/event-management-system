@@ -1,7 +1,10 @@
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { isRegistered } from '../features/registrations/registrationsSlice.js'
 import { formatEventDate, formatEventTime, formatLocation, formatPrice } from '../utils/format.js'
 
 export default function EventCard({ event }) {
+  const registered = useSelector((state) => isRegistered(state, event.id))
   const price = formatPrice(event)
   const location = formatLocation(event)
 
@@ -14,6 +17,7 @@ export default function EventCard({ event }) {
           <div className="image-fallback">No image</div>
         )}
         {event.segment && <span className="tag">{event.segment}</span>}
+        {registered && <span className="badge badge-upcoming">Registered</span>}
       </Link>
       <div className="event-card-body">
         <p className="event-date">

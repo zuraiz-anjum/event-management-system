@@ -2,11 +2,11 @@ import { Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
 import { GuestOnly, RequireAuth } from './components/RouteGuards.jsx'
 import Categories from './pages/Categories.jsx'
-import ComingSoon from './pages/ComingSoon.jsx'
 import EventDetails from './pages/EventDetails.jsx'
 import Events from './pages/Events.jsx'
 import Home from './pages/Home.jsx'
 import Login from './pages/Login.jsx'
+import MyEvents from './pages/MyEvents.jsx'
 import NotFound from './pages/NotFound.jsx'
 import Register from './pages/Register.jsx'
 
@@ -21,7 +21,7 @@ export default function App() {
         <Route path="events/:id" element={<EventDetails />} />
 
         <Route element={<RequireAuth />}>
-          <Route path="my-events" element={<ComingSoon title="My Events" />} />
+          <Route path="my-events" element={<MyEvents />} />
         </Route>
 
         <Route element={<GuestOnly />}>

@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
+import RegisterButton from '../components/RegisterButton.jsx'
 import { ErrorMessage, Spinner } from '../components/StatusMessage.jsx'
 import { fetchEventDetails } from '../features/events/eventsSlice.js'
 import {
@@ -107,6 +108,7 @@ export default function EventDetails() {
             <InfoRow label="Tickets on sale">{formatDateTime(event.onSaleStart)}</InfoRow>
           </dl>
           <div className="details-actions">
+            <RegisterButton event={event} />
             {event.url && (
               <a className="btn btn-primary btn-block" href={event.url} target="_blank" rel="noreferrer">
                 Buy tickets on Ticketmaster

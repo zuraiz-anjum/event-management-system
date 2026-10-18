@@ -1,0 +1,116 @@
+.registered-box {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.registered-note {
+  margin: 0;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  background: #ecfdf3;
+  color: var(--success);
+  font-weight: 600;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.badge-upcoming {
+  background: #ecfdf3;
+  color: var(--success);
+}
+
+.badge-done {
+  background: #eef0f4;
+  color: var(--muted);
+}
+
+.event-card-image .badge {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+}
+
+.my-events-section {
+  margin-bottom: 2rem;
+}
+
+.count {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.registration-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.registration {
+  display: grid;
+  grid-template-columns: 160px 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+}
+
+.registration-done {
+  opacity: 0.8;
+}
+
+.registration-image {
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.registration-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.registration-image .image-fallback {
+  min-height: 0;
+}
+
+.registration-body h3 {
+  margin-bottom: 0.3rem;
+}
+
+.registration-body h3 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.registration-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .registration {
+    grid-template-columns: 1fr;
+  }
+
+  .registration-actions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
