@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import authReducer, { SESSION_KEY } from '../features/auth/authSlice.js'
+import eventsReducer from '../features/events/eventsSlice.js'
 import toastReducer from '../features/toast/toastSlice.js'
 import { removeKey, writeJson } from '../utils/storage.js'
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
+    events: eventsReducer,
     toast: toastReducer,
   },
 })

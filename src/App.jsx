@@ -1,7 +1,10 @@
 import { Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
 import { GuestOnly, RequireAuth } from './components/RouteGuards.jsx'
+import Categories from './pages/Categories.jsx'
 import ComingSoon from './pages/ComingSoon.jsx'
+import EventDetails from './pages/EventDetails.jsx'
+import Events from './pages/Events.jsx'
 import Home from './pages/Home.jsx'
 import Login from './pages/Login.jsx'
 import NotFound from './pages/NotFound.jsx'
@@ -12,10 +15,10 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="events" element={<ComingSoon title="Events" />} />
-        <Route path="upcoming" element={<ComingSoon title="Upcoming events" />} />
-        <Route path="categories" element={<ComingSoon title="Categories" />} />
-        <Route path="events/:id" element={<ComingSoon title="Event details" />} />
+        <Route path="events" element={<Events mode="all" />} />
+        <Route path="upcoming" element={<Events mode="upcoming" />} />
+        <Route path="categories" element={<Categories />} />
+        <Route path="events/:id" element={<EventDetails />} />
 
         <Route element={<RequireAuth />}>
           <Route path="my-events" element={<ComingSoon title="My Events" />} />
