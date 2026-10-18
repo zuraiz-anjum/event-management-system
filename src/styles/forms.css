@@ -48,12 +48,12 @@
 .form-error {
   margin-bottom: 0.75rem;
   padding: 0.6rem 0.75rem;
-  background: #fef2f2;
+  background: var(--danger-soft);
   border-radius: 8px;
 }
 
 .notice {
-  background: #eef0ff;
+  background: var(--tint);
   color: var(--primary-dark);
   padding: 0.6rem 0.75rem;
   border-radius: 8px;

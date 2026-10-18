@@ -1,15 +1,20 @@
 :root {
-  --bg: #f6f7fb;
-  --surface: #ffffff;
-  --text: #1c1f2e;
-  --muted: #667085;
-  --border: #e3e6ee;
-  --primary: #4f46e5;
-  --primary-dark: #4338ca;
-  --success: #15803d;
-  --danger: #b91c1c;
-  --radius: 12px;
-  --shadow: 0 1px 3px rgba(16, 24, 40, 0.08), 0 4px 14px rgba(16, 24, 40, 0.06);
+  --bg: #f4efe6;
+  --surface: #fbf8f2;
+  --text: #2e2924;
+  --muted: #7b7168;
+  --border: #e3dacb;
+  --primary: #5a4a3c;
+  --primary-dark: #45382c;
+  --tint: #ece4d6;
+  --tint-strong: #e2d7c5;
+  --chip: #ebe4d8;
+  --success: #5b6e4f;
+  --success-soft: #e9ece0;
+  --danger: #9a4436;
+  --danger-soft: #f3e5df;
+  --radius: 10px;
+  --shadow: 0 1px 2px rgba(60, 45, 30, 0.06), 0 4px 12px rgba(60, 45, 30, 0.05);
 }
 
 * {
@@ -74,7 +79,7 @@ img {
 .btn-primary {
   background: var(--primary);
   border-color: var(--primary);
-  color: #fff;
+  color: var(--surface);
 }
 
 .btn-primary:hover {
@@ -87,7 +92,7 @@ img {
 }
 
 .btn-danger:hover {
-  background: #fef2f2;
+  background: var(--danger-soft);
   border-color: var(--danger);
 }
 
@@ -97,6 +102,6 @@ img {
 }
 
 :focus-visible {
-  outline: 3px solid rgba(79, 70, 229, 0.45);
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }

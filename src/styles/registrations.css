@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0.6rem 0.75rem;
   border-radius: 8px;
-  background: #ecfdf3;
+  background: var(--success-soft);
   color: var(--success);
   font-weight: 600;
   text-align: center;
@@ -22,12 +22,12 @@
 }
 
 .badge-upcoming {
-  background: #ecfdf3;
+  background: var(--success-soft);
   color: var(--success);
 }
 
 .badge-done {
-  background: #eef0f4;
+  background: var(--chip);
   color: var(--muted);
 }
 

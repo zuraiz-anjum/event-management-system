@@ -1,6 +1,7 @@
 .hero {
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
-  color: #fff;
+  background: var(--tint);
+  color: var(--text);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: clamp(2rem, 6vw, 4rem);
 }
@@ -120,7 +121,7 @@
   width: 100%;
   height: 100%;
   min-height: 160px;
-  background: #e9ebf5;
+  background: var(--chip);
   color: var(--muted);
 }
 
@@ -164,7 +165,7 @@
   padding: 0.2rem 0.65rem;
   border-radius: 999px;
   background: var(--primary);
-  color: #fff;
+  color: var(--surface);
   font-size: 0.78rem;
   font-weight: 600;
   text-decoration: none;
@@ -177,12 +178,12 @@
 }
 
 .tag-plain {
-  background: #eef0ff;
+  background: var(--tint);
   color: var(--primary-dark);
 }
 
 a.tag-plain:hover {
-  background: #dfe2ff;
+  background: var(--tint-strong);
 }
 
 .tag-large {
@@ -275,7 +276,7 @@ a.tag-plain:hover {
 .details-hero {
   border-radius: var(--radius);
   overflow: hidden;
-  background: #e9ebf5;
+  background: var(--chip);
   max-height: 420px;
   margin-bottom: 1.5rem;
 }
@@ -310,7 +311,7 @@ a.tag-plain:hover {
 .seatmap {
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: #fff;
+  background: var(--surface);
 }
 
 .details-side {

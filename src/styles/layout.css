@@ -64,7 +64,7 @@
 
 .nav a.active {
   color: var(--primary);
-  background: #eef0ff;
+  background: var(--tint);
 }
 
 .nav-user {
@@ -138,7 +138,7 @@
   padding: 0.75rem 1rem;
   border-radius: 10px;
   background: var(--text);
-  color: #fff;
+  color: var(--surface);
   box-shadow: var(--shadow);
 }
 
